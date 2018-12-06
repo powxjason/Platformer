@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4801023127533162}
   - component: {fileID: 2569400266623503100}
   m_Layer: 31
-  m_Name: Lucas's Pallete
+  m_Name: Pallete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
