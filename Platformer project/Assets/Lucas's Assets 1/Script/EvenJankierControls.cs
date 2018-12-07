@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JankyAiming : MonoBehaviour {
+public class EvenJankierControls : MonoBehaviour {
     public float bulletLife;
     Vector2 AimAngle;
     public float bulletSpeed;
@@ -17,61 +17,63 @@ public class JankyAiming : MonoBehaviour {
 	
 	// change the vector2 in each if block, and it should, maybe work.
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             //Aim Up
             Debug.Log("up");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.D))
         {
             //Aim Up and to the Right
             Debug.Log("UpRight");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             //Aim Right
             Debug.Log("Right");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D))
         {
             //Aim Down and to the Right
             Debug.Log("DownRight");
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             //Aim Down
 
             Debug.Log("Down");
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.A))
         {
             //Aim Down and to the left
 
             Debug.Log("DownLeft");
 
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             //Aim Left
 
             Debug.Log("Left");
 
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.LeftArrow))
+        } 
+        if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.A))
         {
             //Aim Up and to the Left
 
             Debug.Log("UpLeft");
 
         }
+        
+        
         if (Input.GetButton("Fire1") && timer > fireSpeed)
         {
             Debug.Log("Fire!");

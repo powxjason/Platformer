@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float moveX = Input.GetAxis("Horizontal");
+        
         Vector3 Velocity = GetComponent<Rigidbody2D>().velocity;
         Velocity.x = moveX * moveSpeed;
         GetComponent<Rigidbody2D>().velocity = Velocity;
