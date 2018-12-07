@@ -20,12 +20,14 @@ public class JankyAiming : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //Aim Up
+            Debug.Log("up");
 
 
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             //Aim Right
+            Debug.Log("Right");
 
 
         }
@@ -33,17 +35,20 @@ public class JankyAiming : MonoBehaviour {
         {
             //Aim Left
 
+            Debug.Log("Left");
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             //Aim Down
 
+            Debug.Log("Down");
 
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.RightArrow))
         {
             //Aim Up and to the Right
+            Debug.Log("UpRight");
 
 
         }
@@ -51,22 +56,26 @@ public class JankyAiming : MonoBehaviour {
         {
             //Aim Up and to the Left
 
+            Debug.Log("UpLeft");
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.LeftArrow))
         {
             //Aim Down and to the left
 
+            Debug.Log("DownLeft");
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.RightArrow))
         {
             //Aim Down and to the Right
-
+            Debug.Log("DownRight");
 
         }
         if (Input.GetButton("Fire1") && timer > fireSpeed)
         {
+            Debug.Log("Fire!");
+
             timer = 0;
             GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
