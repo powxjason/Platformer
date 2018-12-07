@@ -1,17 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: e9b6b8675848df9468d5fbdca7d0a6a3
-TextureImporter:
-  fileIDToRecycleName: {}
-=======
-guid: 16898a01fe91dd74dadf5c317d351499
 TextureImporter:
   fileIDToRecycleName:
     21300000: WalkForward_0
     21300002: WalkForward_1
     21300004: WalkForward_2
     21300006: WalkForward_3
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,33 +35,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: -1
-=======
     filterMode: 0
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 16
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,9 +67,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 1
-=======
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,7 +79,6 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,13 +86,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-    outline: []
-    physicsShape: []
-    bones: []
-    spriteID: c71558c823f4c304a939fc74da3cdb12
-=======
     sprites:
     - serializedVersion: 2
       name: WalkForward_0
@@ -131,7 +102,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 537b454740093464485f2815756ab0fc
+      spriteID: 9eb02a7345a0277479bbc73c5fa94e6e
       vertices: []
       indices: 
       edges: []
@@ -151,7 +122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01c4a62b35f95f44a1972c75721b2eb
+      spriteID: 18487e4e6a9665346bcfc0d4b4fd1180
       vertices: []
       indices: 
       edges: []
@@ -171,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 666ba69ba02b80c44a8caa8f4d15df8a
+      spriteID: e3796e494bf0d664ba40d6af3a18baf7
       vertices: []
       indices: 
       edges: []
@@ -191,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20b951b13c020a5448e73ac9a14a690e
+      spriteID: 09d61e59486c4e3498f23242882a0a34
       vertices: []
       indices: 
       edges: []
@@ -199,8 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 61f972e02ff43254e9e688f057288ea9
->>>>>>> 8aa47e32aff225f61ee29acfbb0010bf5a2769f0
+    spriteID: 0e7c8099afb162c4aad903a9d0038556
     vertices: []
     indices: 
     edges: []

@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: b5c48f241dfef4f4ab0cf034e25d33dc
+guid: 2e7fc581ec76a6544878e5879b5c1382
 TextureImporter:
   fileIDToRecycleName:
-    21300000: WalkBack_0
-    21300002: WalkBack_1
-    21300004: WalkBack_2
-    21300006: WalkBack_3
+    21300000: LegsIdle_0
+    21300002: LegsIdle_1
+    21300004: LegsIdle_2
+    21300006: LegsIdle_3
+    21300008: LegsIdle_4
+    21300010: LegsIdle_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,7 +42,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -88,7 +90,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WalkBack_0
+      name: LegsIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -102,13 +104,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de0243012806b2c43b621f1eb68118c7
+      spriteID: a53c56df0bc55b341b5f0ac7218fab72
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkBack_1
+      name: LegsIdle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -122,13 +124,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4fb809af72cb3e498676a31047fe443
+      spriteID: 2627e0c857104a94790c091de1f5f628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkBack_2
+      name: LegsIdle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -142,13 +144,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd467ede77539a045a3e6572e19ef49c
+      spriteID: 4da801a003d31794b91674480ec7f4a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WalkBack_3
+      name: LegsIdle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -162,7 +164,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0a35fe15a6f044eae7d75ca66e8d0c
+      spriteID: 57c0ecdfac6476e4f8b99ade4e55f37b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegsIdle_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b71f9df5802c414e87828f0cc9b3d7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegsIdle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6707e8136b2fd334fa0bacadf4b65012
       vertices: []
       indices: 
       edges: []
@@ -170,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3013e533620799c4484320f2f9500fc8
+    spriteID: 527e6f4ab3994a347a692aba799f7e72
     vertices: []
     indices: 
     edges: []
