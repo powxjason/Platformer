@@ -7,6 +7,8 @@ public class TorsoCont : MonoBehaviour {
     int x;
     int y;
 
+
+
     
 
 	// Use this for initialization
@@ -43,9 +45,6 @@ public class TorsoCont : MonoBehaviour {
         }
 
         Direction(x, y);
-
-
-
     }
 
     public void Direction(int x, int y)
@@ -102,7 +101,7 @@ public class TorsoCont : MonoBehaviour {
 
     public void Frame(int F)
     {
-
+        GetComponent<Animator>().SetInteger("Frame", F);
     }
 
 
