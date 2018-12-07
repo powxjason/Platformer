@@ -17,55 +17,55 @@ public class EvenJankierControls : MonoBehaviour {
 	
 	// change the vector2 in each if block, and it should, maybe work.
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
         {
             //Aim Up
             Debug.Log("up");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
         {
             //Aim Up and to the Right
             Debug.Log("UpRight");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A))
         {
             //Aim Right
             Debug.Log("Right");
 
 
         }
-        if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
         {
             //Aim Down and to the Right
             Debug.Log("DownRight");
 
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A))
         {
             //Aim Down
 
             Debug.Log("Down");
 
         }
-        if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
         {
             //Aim Down and to the left
 
             Debug.Log("DownLeft");
 
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))
         {
             //Aim Left
 
             Debug.Log("Left");
 
         } 
-        if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
             //Aim Up and to the Left
 
