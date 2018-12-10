@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1006119306}
   - component: {fileID: 1006119305}
   - component: {fileID: 1006119307}
+  - component: {fileID: 1006119309}
   - component: {fileID: 1006119308}
   m_Layer: 0
   m_Name: Torso
@@ -202,7 +203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Frame: 0
-  Shoot: 0
   Direct: 0
 --- !u!95 &1006119308
 Animator:
@@ -213,7 +213,7 @@ Animator:
   m_GameObject: {fileID: 1006119304}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf6b59295ac705b41aa7cfcc167b13c1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -222,6 +222,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1006119309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006119304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0bea43e8630bb4c9909ecfd52ea3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
 --- !u!1 &1154214013
 GameObject:
   m_ObjectHideFlags: 0

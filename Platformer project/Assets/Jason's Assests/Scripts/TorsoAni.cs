@@ -5,7 +5,7 @@ using UnityEngine;
 public class TorsoAni : MonoBehaviour {
 
     public int Frame;
-    public bool Shoot;
+    
 
     public int Direct;
 
@@ -19,7 +19,7 @@ public class TorsoAni : MonoBehaviour {
 	void Update () {
 
         GetComponent<Animator>().SetInteger("Frame", Frame);
-        GetComponent<Animator>().SetBool("Shoot", Shoot);
+      
 
         if(Frame == 1 || Frame == 5)
         {

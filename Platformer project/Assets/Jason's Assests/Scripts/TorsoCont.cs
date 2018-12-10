@@ -4,51 +4,50 @@ using UnityEngine;
 
 public class TorsoCont : MonoBehaviour {
 
-    int x;
-    int y;
+    public int x;
+    public int y;
 
-
-
-    
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKey("up"))
         {
             y = 1;
-        }else if (Input.GetKey("down"))
+            Direction(x, y);
+        }
+        else if (Input.GetKey("down"))
         {
             y = -1;
+            Direction(x, y);
         }
         else
         {
             y = 0;
+            Direction(x, y);
         }
 
         if (Input.GetKey("left"))
         {
             x = -1;
+            Direction(x, y);
         }
         else if (Input.GetKey("right"))
         {
             x = 1;
+            Direction(x, y);
         }
         else
         {
             x = 0;
+            Direction(x, y);
         }
 
-        Direction(x, y);
+     
     }
 
     public void Direction(int x, int y)
     {
+        
         if (x == 1)
         {
             if(y == 1)
@@ -101,7 +100,8 @@ public class TorsoCont : MonoBehaviour {
 
     public void Frame(int F)
     {
-        GetComponent<Animator>().SetInteger("Frame", F);
+        Debug.Log(F);
+        GetComponent<TorsoAni>().Frame = F;
     }
 
 
