@@ -5,6 +5,7 @@ using UnityEngine;
 public class JankyAiming : MonoBehaviour{
     public float bulletLife;
     Vector3 AimAngle;
+    public bool Active = false;
     public float bulletSpeed;
     public float fireSpeed;
     float timer = 0;
@@ -19,170 +20,173 @@ public class JankyAiming : MonoBehaviour{
     // change the vector3 in each if block, and it should, maybe work.
     void Update()
     {
-        timer += Time.deltaTime;
-        if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        if (Active)
         {
-            //Aim Up
-            Debug.Log("up");
-            AimAngle = new Vector3(0, 1, 0);
-            AimAngle.Normalize();
+            timer += Time.deltaTime;
+            if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow))
+            {
+                //Aim Up
+                Debug.Log("up");
+                AimAngle = new Vector3(0, 1, 0);
+                AimAngle.Normalize();
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+                }
+
+
+            }
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+            {
+                //Aim Up and to the Right
+                Debug.Log("UpRight");
+                AimAngle = new Vector3(1, 1, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+
+            }
+            if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow))
+            {
+                //Aim Right
+                Debug.Log("Right");
+                AimAngle = new Vector3(1, 0, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+
+            }
+            if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
+            {
+                //Aim Down and to the Right
+                Debug.Log("DownRight");
+                AimAngle = new Vector3(1, -1, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+            }
+            if (Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.LeftArrow))
+            {
+                //Aim Down
+
+                Debug.Log("Down");
+                AimAngle = new Vector3(0, -1, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+            }
+            if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
+            {
+                //Aim Down and to the left
+
+                Debug.Log("DownLeft");
+                AimAngle = new Vector3(-1, -1, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+            }
+            if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow))
+            {
+                //Aim Left
+
+                Debug.Log("Left");
+                AimAngle = new Vector3(-1, 0, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+            }
+            if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
+            {
+                //Aim Up and to the Left
+
+                Debug.Log("UpLeft");
+                AimAngle = new Vector3(-1, 1, 0);
+                AimAngle.Normalize();
+
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
+                    Debug.Log("Fire!");
+
+                    Shooting(AimAngle);
+
+
+                }
+
+            }
             if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
                 Shooting(AimAngle);
 
+
             }
-
-
-        }
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
-        {
-            //Aim Up and to the Right
-            Debug.Log("UpRight");
-            AimAngle = new Vector3(1, 1, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
+            else
             {
-                Debug.Log("Fire!");
+                //Aim Right
+                Debug.Log("Right");
+                AimAngle = new Vector3(1, 0, 0);
+                AimAngle.Normalize();
 
-                Shooting(AimAngle);
+                if (Input.GetButton("Fire1") && timer >= fireSpeed)
+                {
 
+                    Shooting(AimAngle);
 
-            }
-
-
-        }
-        if (Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow))
-        {
-            //Aim Right
-            Debug.Log("Right");
-            AimAngle = new Vector3(1, 0, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
+                }
 
             }
-
-
-        }
-        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
-        {
-            //Aim Down and to the Right
-            Debug.Log("DownRight");
-            AimAngle = new Vector3(1, -1, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
-
-            }
-
-        }
-        if (Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.LeftArrow))
-        {
-            //Aim Down
-
-            Debug.Log("Down");
-            AimAngle = new Vector3(0, -1, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
-
-            }
-
-        }
-        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
-        {
-            //Aim Down and to the left
-
-            Debug.Log("DownLeft");
-            AimAngle = new Vector3(-1, -1, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
-
-            }
-
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow))
-        {
-            //Aim Left
-
-            Debug.Log("Left");
-            AimAngle = new Vector3(-1, 0, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
-
-            }
-
-        }
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
-        {
-            //Aim Up and to the Left
-
-            Debug.Log("UpLeft");
-            AimAngle = new Vector3(-1, 1, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-                Debug.Log("Fire!");
-
-                Shooting(AimAngle);
-
-
-            }
-
-        }
-        if (Input.GetButton("Fire1") && timer >= fireSpeed)
-        {
-            Debug.Log("Fire!");
-
-            Shooting(AimAngle);
-
-
-        }
-        else
-        {
-            //Aim Right
-            Debug.Log("Right");
-            AimAngle = new Vector3(1, 0, 0);
-            AimAngle.Normalize();
-
-            if (Input.GetButton("Fire1") && timer >= fireSpeed)
-            {
-
-                Shooting(AimAngle);
-
-            }
-
         }
 
     }
