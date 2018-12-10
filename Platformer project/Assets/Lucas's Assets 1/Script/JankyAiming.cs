@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JankyAiming : MonoBehaviour
-{
+public class JankyAiming : MonoBehaviour{
     public float bulletLife;
     Vector3 AimAngle;
     public float bulletSpeed;
@@ -17,7 +16,7 @@ public class JankyAiming : MonoBehaviour
         AimAngle = new Vector3(0, 0, 0);
     }
 
-    // change the vector2 in each if block, and it should, maybe work.
+    // change the vector3 in each if block, and it should, maybe work.
     void Update()
     {
         timer += Time.deltaTime;
