@@ -6,38 +6,44 @@ public class playerMovementNormal : MonoBehaviour {
     public float jumpSpeed = 1.0f;
     bool grounded = false;
     public float moveSpeed = 1.0f;
+    public bool active = false;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
         //float moveX; //= Input.GetAxis("Horizontal");
-        Vector3 Velocity;
-        if (Input.GetKey(KeyCode.A))
+
+        if (active)
         {
-            Velocity = GetComponent<Rigidbody2D>().velocity;
-            Velocity.x = -1 * moveSpeed;
-            GetComponent<Rigidbody2D>().velocity = Velocity;
+            Vector3 Velocity;
+            if (Input.GetKey(KeyCode.A))
+            {
+                Velocity = GetComponent<Rigidbody2D>().velocity;
+                Velocity.x = -1 * moveSpeed;
+                GetComponent<Rigidbody2D>().velocity = Velocity;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Velocity = GetComponent<Rigidbody2D>().velocity;
+                Velocity.x = 1 * moveSpeed;
+                GetComponent<Rigidbody2D>().velocity = Velocity;
+            }
+            if (!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+            {
+                Velocity = GetComponent<Rigidbody2D>().velocity;
+                Velocity.x = 0;
+                GetComponent<Rigidbody2D>().velocity = Velocity;
+            }
+            //Vector3 Velocity = GetComponent<Rigidbody2D>().velocity;
+            // Velocity.x = moveX * moveSpeed;
+            // GetComponent<Rigidbody2D>().velocity = Velocity;
+
+            if (Input.GetButtonDown("Jump") && grounded)
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
+            }
+
         }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Velocity = GetComponent<Rigidbody2D>().velocity;
-            Velocity.x = 1 * moveSpeed;
-            GetComponent<Rigidbody2D>().velocity = Velocity;
-        }
-        if(!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
-        {
-            Velocity = GetComponent<Rigidbody2D>().velocity;
-            Velocity.x = 0;
-            GetComponent<Rigidbody2D>().velocity = Velocity;
-        }
-        //Vector3 Velocity = GetComponent<Rigidbody2D>().velocity;
-       // Velocity.x = moveX * moveSpeed;
-       // GetComponent<Rigidbody2D>().velocity = Velocity;
-        
-        if(Input.GetButtonDown("Jump") && grounded)
-        {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0,100 * jumpSpeed));
-        }
-        
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -60,4 +66,5 @@ public class playerMovementNormal : MonoBehaviour {
             grounded = false;
         }
     }
+
 }

@@ -7,7 +7,7 @@ public class LegsAni : MonoBehaviour {
     public float X;
     public float Y;
 
-    GameObject Player;
+    public GameObject Player;
 
     public float PlayerVelocityX;
     public float PlayerVelocityY;

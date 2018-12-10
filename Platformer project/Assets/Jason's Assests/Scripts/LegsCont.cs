@@ -17,11 +17,11 @@ public class LegsCont : MonoBehaviour {
         if (InUse)
         {
 
-            if (Input.GetButton("A"))
+            if (Input.GetKey(KeyCode.A))
             {
                 X = -1;
             }
-            else if (Input.GetButton("D"))
+            else if (Input.GetKey(KeyCode.D))
             {
                 X = 1;
             }
