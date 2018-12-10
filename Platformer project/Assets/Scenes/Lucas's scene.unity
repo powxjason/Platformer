@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletLife: 10
-  bulletSpeed: 5
-  fireSpeed: 0.1
+  bulletSpeed: 20
+  fireSpeed: 0.3
   prefab: {fileID: 1634510732189584, guid: 18e37130732c3bf49b59e2500d08584f, type: 2}
 --- !u!1 &346286449
 GameObject:
@@ -944,6 +944,18 @@ Prefab:
         type: 2}
       propertyPath: moveSpeed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935431148426624, guid: b26016ffc6fcf24448e1d00f7f855a06, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186851152786446, guid: b26016ffc6fcf24448e1d00f7f855a06, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847657792695018, guid: b26016ffc6fcf24448e1d00f7f855a06, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114128311520142242, guid: b26016ffc6fcf24448e1d00f7f855a06, type: 2}

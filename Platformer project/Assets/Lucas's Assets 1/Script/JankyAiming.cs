@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JankyAiming : MonoBehaviour {
+public class JankyAiming : MonoBehaviour
+{
     public float bulletLife;
     Vector3 AimAngle;
     public float bulletSpeed;
@@ -11,27 +12,26 @@ public class JankyAiming : MonoBehaviour {
     public GameObject prefab;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         AimAngle = new Vector3(0, 0, 0);
-	}
-	
-	// change the vector2 in each if block, and it should, maybe work.
-	void Update () {
+    }
+
+    // change the vector2 in each if block, and it should, maybe work.
+    void Update()
+    {
+        timer += Time.deltaTime;
         if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow))
         {
             //Aim Up
             Debug.Log("up");
-            AimAngle = new Vector3(200, 200, 0);
+            AimAngle = new Vector3(0, 1, 0);
             AimAngle.Normalize();
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle.normalized * bulletSpeed;
-                Destroy(bullet, bulletLife);
-
+                Shooting(AimAngle);
 
             }
 
@@ -41,16 +41,14 @@ public class JankyAiming : MonoBehaviour {
         {
             //Aim Up and to the Right
             Debug.Log("UpRight");
+            AimAngle = new Vector3(1, 1, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -61,16 +59,14 @@ public class JankyAiming : MonoBehaviour {
         {
             //Aim Right
             Debug.Log("Right");
+            AimAngle = new Vector3(1, 0, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -81,16 +77,14 @@ public class JankyAiming : MonoBehaviour {
         {
             //Aim Down and to the Right
             Debug.Log("DownRight");
+            AimAngle = new Vector3(1, -1, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -101,16 +95,14 @@ public class JankyAiming : MonoBehaviour {
             //Aim Down
 
             Debug.Log("Down");
+            AimAngle = new Vector3(0, -1, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -121,16 +113,14 @@ public class JankyAiming : MonoBehaviour {
             //Aim Down and to the left
 
             Debug.Log("DownLeft");
+            AimAngle = new Vector3(-1, -1, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -141,16 +131,14 @@ public class JankyAiming : MonoBehaviour {
             //Aim Left
 
             Debug.Log("Left");
+            AimAngle = new Vector3(-1, 0, 0);
+            AimAngle.Normalize();
 
-
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
@@ -161,31 +149,51 @@ public class JankyAiming : MonoBehaviour {
             //Aim Up and to the Left
 
             Debug.Log("UpLeft");
+            AimAngle = new Vector3(-1, 1, 0);
+            AimAngle.Normalize();
 
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
             {
                 Debug.Log("Fire!");
 
-                timer = 0;
-                GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-                Destroy(bullet, bulletLife);
+                Shooting(AimAngle);
 
 
             }
 
         }
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && timer >= fireSpeed)
         {
             Debug.Log("Fire!");
 
-            timer = 0;
-            GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = AimAngle * bulletSpeed;
-            Destroy(bullet, bulletLife);
+            Shooting(AimAngle);
 
 
         }
+        else
+        {
+            //Aim Right
+            Debug.Log("Right");
+            AimAngle = new Vector3(1, 0, 0);
+            AimAngle.Normalize();
 
+            if (Input.GetButton("Fire1") && timer >= fireSpeed)
+            {
+
+                Shooting(AimAngle);
+
+            }
+
+        }
+
+    }
+    void Shooting(Vector3 AimAngle)
+    {
+        Debug.Log("Fire!");
+
+        timer = 0;
+        GameObject bullet = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<Rigidbody2D>().velocity = AimAngle.normalized * bulletSpeed;
+        Destroy(bullet, bulletLife);
     }
 }
