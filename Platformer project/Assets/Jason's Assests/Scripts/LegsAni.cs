@@ -8,6 +8,7 @@ public class LegsAni : MonoBehaviour {
     public float Y;
 
     public GameObject Player;
+    public GameObject Torso;
 
     public float PlayerVelocityX;
     public float PlayerVelocityY;
@@ -24,13 +25,10 @@ public class LegsAni : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        X = Input.GetAxisRaw("Horizontal");
-        Y = Input.GetAxisRaw("Vertical");
-
         PlayerVelocityX = Player.GetComponent<Rigidbody2D>().velocity.x;
         PlayerVelocityY = Player.GetComponent<Rigidbody2D>().velocity.y;
 
-        Direct = Player.GetComponent<TorsoAni>().Direct;
+        Direct = Torso.GetComponent<TorsoAni>().Direct;
 
         if (Direct == -1)
         {
