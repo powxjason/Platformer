@@ -1737,7 +1737,7 @@ Tilemap:
   - first: {x: 23, y: -4, z: 0}
     second:
       m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2158,14 +2158,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300012, guid: 53d759c0aef06824b940de2ecc1ec282, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: 21300014, guid: 53d759c0aef06824b940de2ecc1ec282, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300016, guid: 53d759c0aef06824b940de2ecc1ec282, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300012, guid: 53d759c0aef06824b940de2ecc1ec282, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 21300004, guid: f32322ea24c32904795dd2c442fa710c, type: 3}
   - m_RefCount: 8
@@ -2311,6 +2311,7 @@ GameObject:
   - component: {fileID: 1954030333}
   - component: {fileID: 1954030332}
   - component: {fileID: 1954030331}
+  - component: {fileID: 1954030336}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
@@ -2445,3 +2446,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954030336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954030330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca935a388f40fc94eb39177936afa1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
