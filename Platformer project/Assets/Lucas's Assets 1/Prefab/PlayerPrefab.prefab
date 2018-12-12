@@ -119,8 +119,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882194544440584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: 3.53, z: 0.079232}
-  m_LocalScale: {x: 0.5771215, y: 0.5771215, z: 0.5771215}
+  m_LocalPosition: {x: -0.96943, y: 2.941, z: 0.081143}
+  m_LocalScale: {x: 0.23666827, y: 0.18924, z: 0.18924}
   m_Children:
   - {fileID: 4892779098991998}
   - {fileID: 4800440582186968}
@@ -135,8 +135,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305683157476052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.006217718, y: -0.20850661, z: -0.013183594}
-  m_LocalScale: {x: 2.0108, y: 2.8897, z: 1}
+  m_LocalPosition: {x: 0.01, y: 0.37, z: -0.013183594}
+  m_LocalScale: {x: 1.955665, y: 3.8442042, z: 1}
   m_Children: []
   m_Father: {fileID: 4831113812748184}
   m_RootOrder: 0
@@ -163,8 +163,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 121.5
+  orthographic: 0
   orthographic size: 3.5801988
   m_Depth: -1
   m_CullingMask:
@@ -213,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.056572437, y: -5.362915}
+  m_Offset: {x: 0.056572437, y: -5.2144547}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -224,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.138825, y: 0.093729496}
+  m_Size: {x: 2.138825, y: 0.39065027}
   m_EdgeRadius: 0
 --- !u!70 &70823918769069518
 CapsuleCollider2D:
@@ -238,8 +238,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.059535913, y: -2.2278044}
-  m_Size: {x: 2.6058705, y: 6.248647}
+  m_Offset: {x: 0.05953594, y: -2.0793438}
+  m_Size: {x: 2.6058705, y: 5.951726}
   m_Direction: 0
 --- !u!81 &81567985224096320
 AudioListener:
@@ -298,6 +298,7 @@ MonoBehaviour:
   X: 0
   Y: 0
   Player: {fileID: 1882194544440584}
+  Torso: {fileID: 1305683157476052}
   PlayerVelocityX: 0
   PlayerVelocityY: 0
   Direct: 0
