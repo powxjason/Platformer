@@ -147,7 +147,7 @@ public class EvenJankierControls : MonoBehaviour {
             }
 
 
-            else
+           /* else
             {
                 //Aim Right
                 Debug.Log("Right");
@@ -162,6 +162,7 @@ public class EvenJankierControls : MonoBehaviour {
                 }
 
             }
+            */
         }
 
     }
