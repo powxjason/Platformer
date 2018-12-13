@@ -34,6 +34,8 @@ public class Health : MonoBehaviour {
         timer += Time.deltaTime;
         LivesText.GetComponent<Text>().text = "Lives; " + Lives;
         LivesText2.GetComponent<Text>().text = "Lives; " + Lives;
+        HealthSlider.GetComponent<Slider>().value = health;
+        HealthSlider2.GetComponent<Slider>().value = health;
 
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -51,6 +53,7 @@ public class Health : MonoBehaviour {
         if (collision.gameObject.tag == "Water")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetInt("Lives", Lives - 1);
         }
             if (health <= 0)
         {
