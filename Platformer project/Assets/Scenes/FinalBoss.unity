@@ -2607,6 +2607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa6e550d9f4df547b010cac43979b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScene: 
   healthBar: {fileID: 2031925808}
 --- !u!1 &702172120
 GameObject:
@@ -4571,7 +4572,7 @@ Tilemap:
   - m_RefCount: 144
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.30588236, g: 0.29803923, b: 0.33333334, a: 1}
+  m_Color: {r: 0.43579665, g: 0.4174528, b: 0.5, a: 1}
   m_Origin: {x: -11, y: -5, z: 0}
   m_Size: {x: 41, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
