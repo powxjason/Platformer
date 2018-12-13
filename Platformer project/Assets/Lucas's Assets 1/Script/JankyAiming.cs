@@ -172,7 +172,7 @@ public class JankyAiming : MonoBehaviour{
 
 
             }
-            else
+           /* else
             {
                 //Aim Right
                 Debug.Log("Right");
@@ -185,8 +185,9 @@ public class JankyAiming : MonoBehaviour{
                     Shooting(AimAngle);
 
                 }
+                */
 
-            }
+          //  }
         }
 
     }

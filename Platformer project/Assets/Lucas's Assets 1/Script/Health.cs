@@ -12,7 +12,7 @@ public class Health : MonoBehaviour {
     public GameObject PauseMenu;
     public Slider HealthSlider;
     public Slider HealthSlider2;
-    public Text healthText;
+   // public Text healthText;
     public int health = 10;
     float timer = 0.0f;
     public AudioClip soundToPlay;
