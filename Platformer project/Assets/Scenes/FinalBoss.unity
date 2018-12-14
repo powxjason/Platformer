@@ -4844,8 +4844,8 @@ MonoBehaviour:
   Fighting: 0
   soundToPlay: {fileID: 0}
   bulletLife: 10
-  bulletSpeed: 2
-  fireSpeed: 0.8
+  bulletSpeed: 8
+  fireSpeed: 0.5
   prefab: {fileID: 1747276474269090, guid: 84500093d9733304f990959fdf1a4a78, type: 2}
   Player: {fileID: 1329128331}
 --- !u!212 &1909958570
@@ -5079,6 +5079,11 @@ Prefab:
         type: 2}
       propertyPath: m_WholeNumbers
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20422750899137332, guid: 265f21beed684da40a6ecdd9aa9ace08,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265f21beed684da40a6ecdd9aa9ace08, type: 2}
