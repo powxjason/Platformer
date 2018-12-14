@@ -8,7 +8,7 @@ public class MainMenuButtons : MonoBehaviour {
 
 	public void NewGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("levelone");
         PlayerPrefs.SetInt("Lives", Lives);
     }
     public void QuitGame()
