@@ -43,7 +43,7 @@ public class Health : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy" && timer > 1.0 && yVelocity >= 0)
         {
             timer = 0;
-            health -= 5;
+            health -= 1;
             Camera.main.GetComponent<AudioSource>().PlayOneShot(soundToPlay);
            // healthText.GetComponent<Text>().text = "Health: " + health;
             HealthSlider.GetComponent<Slider>().value = health;
