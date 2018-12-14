@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
     float yVelocity;
+    public Text TimeText;
+    public Text TimeText2;
     public Text LivesText;
     public Text LivesText2;
     public int Lives = 10;
@@ -14,6 +16,7 @@ public class Health : MonoBehaviour {
     public Slider HealthSlider2;
    // public Text healthText;
     public int health = 10;
+    public float LevelTime = 60.0f;
     float timer = 0.0f;
     public AudioClip soundToPlay;
     void Start()
@@ -31,11 +34,19 @@ public class Health : MonoBehaviour {
     private void Update()
     {
         yVelocity = GetComponent<Rigidbody2D>().velocity.y;
+        LevelTime -= Time.deltaTime;
         timer += Time.deltaTime;
-        LivesText.GetComponent<Text>().text = "Lives; " + Lives;
-        LivesText2.GetComponent<Text>().text = "Lives; " + Lives;
+        LivesText.GetComponent<Text>().text = "Lives: " + Lives;
+        LivesText2.GetComponent<Text>().text = "Lives: " + Lives;
+        TimeText.GetComponent<Text>().text = "Time: " + LevelTime;
+        TimeText2.GetComponent<Text>().text = "Time: " + LevelTime;
         HealthSlider.GetComponent<Slider>().value = health;
         HealthSlider2.GetComponent<Slider>().value = health;
+        if (LevelTime <= 0.0)
+        {
+            PlayerPrefs.SetInt("Lives", Lives - 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -59,7 +70,7 @@ public class Health : MonoBehaviour {
         {
             if(Lives == 0)
             {
-                SceneManager.LoadScene("Lose");
+                SceneManager.LoadScene("Winner");
             }
             PlayerPrefs.SetInt("Lives", Lives - 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
